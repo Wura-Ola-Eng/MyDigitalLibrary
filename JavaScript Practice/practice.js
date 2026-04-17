@@ -1,17 +1,17 @@
 
 // Declaring my variables
 
-const Libraryname = "Wura's Digital Library"
+const libraryname = "Wura's Digital Library"
 const studentName = "Wura";
-const Level =400
-const Course ="Ethics of mass communication"
-const Topic = "NUJ code of ethics"
+const level =400
+const course ="Ethics of mass communication"
+const topic = "NUJ code of ethics"
 
-console.log(Libraryname);
-console.log(Level);
+console.log(libraryname);
+console.log(level);
 console.log(studentName);
-console.log(Course);
-console.log(Topic);
+console.log(course);
+console.log(topic);
 console.log("                                    ");
 
 
@@ -21,16 +21,17 @@ console.log("                                    ");
 
 
 
-const MaterialDetails = (studentName, Level, Course, Topic) =>  {console.log(`Name: ${studentName}`)
-                                                                console.log(`Level: ${Level}`)
-                                                                console.log(`Course: ${Course}`)
-                                                                console.log(`Topic: ${Topic}`)
-                                                                console.log ("--------------------------")}
+const materialDetails = (studentName, Level, Course, Topic) =>  
+        {console.log(`Name: ${studentName}`)
+        console.log(`Level: ${Level}`)
+        console.log(`Course: ${Course}`)
+        console.log(`Topic: ${Topic}`)
+        console.log ("--------------------------")}
 
 //Calling my function
-MaterialDetails("ola", 200, "Communication Research", "Introduction");
-MaterialDetails("Tobi", 300, "Advertising Research", "AD Research 101");
-MaterialDetails("Femi", 400, "PR Research", "Introduction to PR");
+materialDetails("ola", 200, "Communication Research", "Introduction");
+materialDetails("Tobi", 300, "Advertising Research", "AD Research 101");
+materialDetails("Femi", 400, "PR Research", "Introduction to PR");
 
 
 const material = {
@@ -42,12 +43,12 @@ const material = {
 console.log(material.topic)
 console.log(material.course)
 
-let Topics = ["ethical issues", "governmment interference", "Citizen Journalism"]
+let topics = ["ethical issues", "government interference", "Citizen Journalism"]
 
-console.log(Topics[2])
+console.log(topics[2])
 
 
-const Materials = [ 
+const materials = [ 
 
                     {id: "1",  level: 400, course: "Communication for Development", topic: "Planning social change", type: "Class note", title: "Week One Class note"},
                     {id: "2",  level: 400, course: "Communication for Development", topic: "Planning social change", type: "past question",  title: "2024/2025 past question"},                    
@@ -55,7 +56,20 @@ const Materials = [
                     {id: "4",  level: 400, course: "Communication for Development", topic: "Rural development", type: "Class note", title: "Week three Class note"},
                     {id: "5",  level: 400, course: "Communication for Development", topic: "Rural development", type: "past question",  title: "2025/2026 past question"}]
 
-console.log(Materials)
-console.log(Materials[1])
-console.log(Materials[0].course)
+console.log(materials);
+console.log(materials[1]);
+console.log(materials[0].course);
 
+
+const materialtitles = materials.map((element) => element.title);
+
+console.log(materialtitles);
+
+const materiallevel = materials.filter((element) => element.level === 400);
+console.log(materiallevel);
+
+const classmaterials = materials.filter((element) => element.title.includes ("past") );
+console.log(classmaterials);
+
+const topictitles = materials.filter((element) => element.topic === "Planning social change").map((element) => element.title);
+console.log(topictitles);
