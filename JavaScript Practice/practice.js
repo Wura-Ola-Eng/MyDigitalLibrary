@@ -33,7 +33,7 @@ materialDetails("ola", 200, "Communication Research", "Introduction");
 materialDetails("Tobi", 300, "Advertising Research", "AD Research 101");
 materialDetails("Femi", 400, "PR Research", "Introduction to PR");
 
-
+//creating objects
 const material = {
     level : 300,
     course : "Issues in mass media",
@@ -48,6 +48,7 @@ let topics = ["ethical issues", "government interference", "Citizen Journalism"]
 console.log(topics[2])
 
 
+// Array of my material objects
 const materials = [ 
 
                     {id: "1",  level: 400, course: "Communication for Development", topic: "Planning social change", type: "Class note", title: "Week One Class note"},
@@ -61,6 +62,8 @@ console.log(materials[1]);
 console.log(materials[0].course);
 
 
+// Mapping and Filtering the objects
+
 const materialtitles = materials.map((element) => element.title);
 
 console.log(materialtitles);
@@ -73,3 +76,16 @@ console.log(classmaterials);
 
 const topictitles = materials.filter((element) => element.topic === "Planning social change").map((element) => element.title);
 console.log(topictitles);
+
+//using the destructing and spread operator
+
+ function materialsinfo ({level, course, title}){
+        console.log(level);
+        console.log(course);
+        console.log(title);
+ }
+
+ materialsinfo(materials[0]);
+ 
+ let updatedmaterial = {...materials[0], title: "Social development restriction"};
+ console.log(updatedmaterial);
