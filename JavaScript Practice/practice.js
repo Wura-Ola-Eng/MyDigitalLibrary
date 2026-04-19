@@ -89,3 +89,17 @@ console.log(topictitles);
  
  let updatedmaterial = {...materials[0], title: "Social development restriction"};
  console.log(updatedmaterial);
+
+
+
+async function loaddata() {
+
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+
+    const data = await response.json();
+
+    const datasize = data.slice(0,3);
+    console.log(datasize);
+}
+
+loaddata();
