@@ -4,7 +4,6 @@ const Dashboard = () => {
   return (
     <div>
       Dashboard
-      <h1>Personal Digital Library</h1>
       </div>
   )
 }

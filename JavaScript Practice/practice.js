@@ -91,7 +91,7 @@ console.log(topictitles);
  console.log(updatedmaterial);
 
 
-
+// Retrieving data using async and await
 async function loaddata() {
 
     const response = await fetch("https://jsonplaceholder.typicode.com/posts");

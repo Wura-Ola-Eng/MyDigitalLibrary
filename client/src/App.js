@@ -7,7 +7,6 @@ import Upload from './pages/Upload';
 import Navbar from './components/Navbar';
 
 
-
 function App() {
   return (
   
