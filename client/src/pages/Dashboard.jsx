@@ -40,10 +40,16 @@ const Dashboard = () => {
         <option value="">All Courses </option>
         <option value="Communication for Development"> Communication for Development</option>
         <option value="Comparative Media Planning"> Comparative Media Planning </option>
+        <option value="Consumer Behaviour"> Consumer Behaviour </option>
         <option value="Data Analysis"> Data Analysis </option>
       </select>
 
+        {/* Loop through the filtered list and create a card for every item found */}
+
       {filteredMaterials.map((material) => (<MaterialCard key={material.id} material={material}/>))}
+
+      {/* Show a "No results" message only if the filtered list is empty */}
+
       {filteredMaterials.length === 0 && <p>No materials found</p>}
       
       </div>
