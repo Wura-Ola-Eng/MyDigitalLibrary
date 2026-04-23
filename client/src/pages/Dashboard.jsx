@@ -53,6 +53,8 @@ const Dashboard = () => {
         <option value="Data Analysis"> Data Analysis </option>
       </select>
 
+      
+
         {/* Loop through the filtered list and create a card for every item found */}
 
       {filteredMaterials.map((material) => (<MaterialCard key={material.id} material={material}/>))}
