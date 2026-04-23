@@ -11,7 +11,16 @@ const Dashboard = () => {
   const [selectedLevel, setSelectedLevel] = useState("");
   const [selectedCourse, setSelectedCourse] = useState("");
 
-  useEffect(() => {setAllMaterials(materials)}, [])
+  useEffect(() => {
+    const stored = localStorage.getItem("materials")
+    if (stored){
+      const parsedMaterials = JSON.parse(stored)
+      setAllMaterials( [...materials, ...parsedMaterials])
+    }
+    else {
+      setAllMaterials(materials)
+    }
+  }, [])
 
   //Create a new list based on the user's choices. 
   // Chain .filter() calls so each one narrows down the list further
@@ -19,12 +28,12 @@ const Dashboard = () => {
   const filteredMaterials = allMaterials
    .filter((material) => selectedLevel === "" ? true : material.level === Number(selectedLevel))
    .filter((material) => selectedCourse === "" ? true : material.course === selectedCourse)
-  .filter((material) =>  material.title.toLowerCase().includes(searchTerm.toLowerCase()))
+   .filter((material) => material.title && material.title.toLowerCase().includes(searchTerm.toLowerCase()))
   
 
 
-  return (
-    <div>
+     return (
+       <div>
       <h1>My  Library</h1>
       <input type="text" placeholder='Search materials' value={searchTerm} onChange={(e) => setSearchTerm (e.target.value)}/>
 
@@ -54,10 +63,7 @@ const Dashboard = () => {
       
       </div>
 
+     ) 
+    }
 
-)
-
-
-}
-
-export default Dashboard
+ export default Dashboard
