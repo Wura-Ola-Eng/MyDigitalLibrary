@@ -10,16 +10,17 @@ As a student, study materials pile up fast. Class notes, past questions, PDF rea
 
 ## The Solution
 
-MyDigitalLibrary gives you one organised place to store and find all your study materials. You can filter by level, filter by course, or search by keyword to find exactly what you need in seconds.
+MyDigitalLibrary is a personal academic library that lets students store and organise their study materials by level, course and topic. Materials can be searched by keyword or filtered by level and course for quick access.
 
 ## Features
 
-- Browse all your study materials on a clean dashboard
-- Search materials by title
-- Filter by academic level and course
-- Upload new materials with course, topic, level and type
-- Materials remain in your browser even after you close the page
-- Fully responsive on desktop and mobile
+- **Dashboard** — view all your study materials in one organised place
+- **Search** — find materials quickly by typing a keyword
+- **Filter** — narrow down materials by academic level or course
+- **Upload** — add new materials with title, course, topic, level and type
+- **Persistent storage** — materials saved in browser localStorage across sessions
+
+
 
 ## Tech Stack
 
@@ -50,15 +51,12 @@ npm start
 
 The app will open at `http://localhost:3000`
 
-## What's Next
+## Future Improvements
 
-This is version 1 — a fully functional frontend app. Planned features for version 2 include:
-
-- Backend with Node.js and Express
-- User authentication and personal accounts
-- PDF file upload and storage via Cloudinary
-- Material sharing between students
-- Course filter that updates dynamically based on uploaded materials
+- Real database storage instead of browser localStorage
+- User accounts and login
+- PDF file upload and storage
+- Course filter that updates automatically based on available materials
 
 ## Author
 
