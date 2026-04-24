@@ -66,7 +66,7 @@ const Upload = () => {
       </select>
       <select value={level} onChange={(e) => setLevel(e.target.value)}>
         <option value="">Select Level</option>
-        <option value="300">300</option>
+        <option value="300">300</option> 
         <option value="400">400</option>
       </select>
 
