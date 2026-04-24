@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import MaterialCard from '../components/MaterialCard'
 import materials from '../data/materials'
+import './Dashboard.css'
 
 const Dashboard = () => {
 
@@ -33,35 +34,46 @@ const Dashboard = () => {
 
 
      return (
-       <div>
-      <h1>My  Library</h1>
-      <input type="text" placeholder='Search materials' value={searchTerm} onChange={(e) => setSearchTerm (e.target.value)}/>
+      <>
+       <div className='dashboardArea'>
+               <h1>My  Library</h1>
 
-      {/* LEVEL DROPDOWN */}
-      <select value={selectedLevel} onChange={(e) => setSelectedLevel(e.target.value)}>
-        <option value="">All Levels </option>
-        <option value="300"> 300 level</option>
-        <option value="400">400 Level</option>
-      </select>
+        <div className='dashboardSearcharea'>
+            <input type="text" placeholder='Search materials' value={searchTerm} onChange={(e) => setSearchTerm (e.target.value)}/>
 
-      {/* COURSE DROPDOWN */}
-      <select value={selectedCourse} onChange={(e) => setSelectedCourse(e.target.value)}>
-        <option value="">All Courses </option>
-        <option value="Communication for Development"> Communication for Development</option>
-        <option value="Comparative Media Planning"> Comparative Media Planning </option>
-        <option value="Consumer Behaviour"> Consumer Behaviour </option>
-        <option value="Data Analysis"> Data Analysis </option>
-      </select>
+            {/* LEVEL DROPDOWN */}
+            <select value={selectedLevel} onChange={(e) => setSelectedLevel(e.target.value)}>
+              <option value="">All Levels </option>
+              <option value="300"> 300 level</option>
+              <option value="400">400 Level</option>
+
+              </select>
+
+              {/* COURSE DROPDOWN */}
+              <select value={selectedCourse} onChange={(e) => setSelectedCourse(e.target.value)}>
+                <option value="">All Courses </option>
+                <option value="Communication for Development"> Communication for Development</option>
+                <option value="Comparative Media Planning"> Comparative Media Planning </option>
+                <option value="Consumer Behaviour"> Consumer Behaviour </option>
+                <option value="Data Analysis"> Data Analysis </option>
+              </select>
+        </div>
+      
 
         {/* Loop through the filtered list and create a card for every item found */}
+              <div className='cardDisplay'>
+                {filteredMaterials.map((material) => (<MaterialCard key={material.id} material={material}/>))}
+              </div>
+            
 
-      {filteredMaterials.map((material) => (<MaterialCard key={material.id} material={material}/>))}
+            {/* Show a "No results" message only if the filtered list is empty */}
 
-      {/* Show a "No results" message only if the filtered list is empty */}
-
-      {filteredMaterials.length === 0 && <p>No materials found</p>}
-      
+            {filteredMaterials.length === 0 && <p>No materials found</p>}
+            
       </div>
+      </>
+
+       
 
      ) 
     }

@@ -1,0 +1,37 @@
+.navBackground{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 15px 30px;
+    background-color: rgb(9, 9, 57);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:  rgb(181, 250, 227);
+    cursor: pointer;
+}
+
+.navBackground a{
+    text-decoration: none ;
+    color: white;
+    background-color: rgb(9, 9, 57);
+    padding: 3px 3px;
+    
+}
+
+
+
+.navBackground a:hover{
+    background-color: rgb(181, 250, 227);
+    border: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    color: black;
+    
+}
+
+.navButtonSection{
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
