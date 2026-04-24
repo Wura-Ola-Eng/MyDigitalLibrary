@@ -46,6 +46,7 @@ const Dashboard = () => {
               <option value="">All Levels </option>
               <option value="300"> 300 level</option>
               <option value="400">400 Level</option>
+
               </select>
 
               {/* COURSE DROPDOWN */}
@@ -60,8 +61,10 @@ const Dashboard = () => {
       
 
         {/* Loop through the filtered list and create a card for every item found */}
-
-            {filteredMaterials.map((material) => (<MaterialCard key={material.id} material={material}/>))}
+              <div className='cardDisplay'>
+                {filteredMaterials.map((material) => (<MaterialCard key={material.id} material={material}/>))}
+              </div>
+            
 
             {/* Show a "No results" message only if the filtered list is empty */}
 

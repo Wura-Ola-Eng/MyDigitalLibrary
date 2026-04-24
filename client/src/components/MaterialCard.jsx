@@ -12,10 +12,14 @@ const MaterialCard = ({material}) => {
     <div className='materialDescription'>
       <h2>{title}</h2>  
     </div>
-    <p>Level:  {level} </p>
-    <p>Course:  {course} </p>
-    <p>Topic:  {topic} </p>
-    <p>Description:  {description}</p>
+
+    <div className='materialDisplay'>
+          <p>Level:  {level} </p>
+          <p>Course:  {course} </p>
+          <p>Topic:  {topic} </p>
+          <p>Description:  {description}</p>
+    </div>
+    
 
  </div>
     </>

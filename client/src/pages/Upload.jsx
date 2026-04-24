@@ -1,6 +1,7 @@
 import React from 'react'
 import {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
+import './Upload.css'
 
 const Upload = () => {
  const [title, setTitle] = useState("")
@@ -51,8 +52,10 @@ const Upload = () => {
  }
 
    return (
-    <div>
-      <h2>Upload Material</h2>
+    <>
+<div className='uploadArea'>
+  <div className='uploadForm'>
+<h2>Upload Material</h2>
       <input type="text" placeholder='Material title' value={title} onChange={(e) => setTitle(e.target.value)} />
       <input type="text" placeholder='Topic' value={topic} onChange={(e) => setTopic(e.target.value)} />
 
@@ -71,10 +74,16 @@ const Upload = () => {
       </select>
 
       <textarea  placeholder = 'Brief description' value={description} onChange={(e) => setDescription(e.target.value)}/>
-      <button onClick={handleSubmit}>Upload Material</button>
+      <button onClick={handleSubmit}>UPLOAD</button> 
+       {successMessage !== "" && <p>{successMessage}</p>}
+  </div>
+      
 
-      {successMessage !== "" && <p>{successMessage}</p>}
+      
     </div>
+
+    </>
+    
   )
 }
 
