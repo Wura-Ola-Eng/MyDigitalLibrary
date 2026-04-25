@@ -31,12 +31,18 @@ MyDigitalLibrary is a personal academic library that lets students store and org
 - **localStorage** — browser-based data persistence (no backend required)
 
 ## Screenshots
+<img width="950" height="434" alt="image" src="https://github.com/user-attachments/assets/c251712f-6b09-4e0d-8ff4-01bc4de18dc4" />
+<img width="921" height="441" alt="image" src="https://github.com/user-attachments/assets/c3e2306e-51f3-4b8d-b57c-3c26d0055cce" />
+<img width="525" height="180" alt="image" src="https://github.com/user-attachments/assets/65885833-8b47-4046-9801-826ced8d24cd" />
+<img width="472" height="394" alt="image" src="https://github.com/user-attachments/assets/8b319704-4239-4fe4-9e0f-3a378d08be81" />
+<img width="852" height="383" alt="image" src="https://github.com/user-attachments/assets/1845297b-aadb-481c-a5d6-e8d9a623d65c" />
 
-*(screenshots coming after deployment)*
+
+
 
 ## Live Demo
 
-*(link coming after deployment)*
+https://my-digital-library-wine.vercel.app/ 
 
 ## Getting Started
 
